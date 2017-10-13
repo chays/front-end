@@ -1,0 +1,931 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Front-End</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<article>
+	<h1>Towards Front-End Developer</h1>
+	<section>
+		<h2>구조</h2>
+		<ul>
+			<li>html기초 <a href="https://www.w3schools.com/tags/default.asp" target="_blank">Html Reference</a></li>
+			<li>html5 <a href="http://fmbip.com/litmus/" target="_blank">HTML5 &amp; CSS3 Support Check</a></li>
+			<li>html 문자 엔티티 <a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" target="_blank">html 문자 엔티티</a></li>
+		</ul>
+	</section>
+<section>
+	<h2>표현</h2>
+	<ul>
+		<li>Reset CSS는 기본적인 HTML 요소의 CSS를 초기화하는 용도로 사용한다. 즉 브라우저 별로 제각각인 디폴트 스타일을 하나의 스타일로 통일시켜 주는 역할을 한다.
+			<ul>
+				<li><a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Eric Meyer’s reset</a></li>
+				<li><a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a></li>
+			</ul>
+		</li>
+		<li>css기초 <a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS Tutorial</a></li>
+		<li><a href="https://css-tricks.com/css3-gradients/" target="_blank">css3-gradients</a></li>
+		<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">css3-flexbox</a></li>
+		<li><a href="http://www.cssgenerators.net/index.php?lang=ko" target="_blank">CSS버튼 자동생성기</a></li>
+		<li><a href="http://www.cssmatic.com/box-shadow" target="_blank">Gradient Generator, Border Radius, Noise Texture, Box Shadow</a></li>
+		<li><a href="http://pxtoem.com/" target="_blank">PXtoEM</a></li>
+		<li><a href="http://www.csszengarden.com/" target="_blank">csszengarden</a></li>
+		<li><a href="https://github.com/necolas/normalize.css" target="_blank">normalize.css</a></li>
+		<li><a href="http://mrcoles.com/blog/css-unminify/" target="_blank">CSS Unminifier</a></li>
+		<li><a href="http://unminify.com/" target="_blank">unminify</a> : JavaScript, CSS and HTML</li>
+		<li><a href="https://www.psd2html.com/js-custom-forms/" target="_blank">온라인서식 디자인적용(all)</a></li>
+		<li><a href="http://www.dfc-e.com/metiers/multimedia/opensource/jqtransform/" target="_blank">온라인서식 디자인적용(checkbox, radio버튼)</a></li>
+		<li><a href="http://webdir.tistory.com/432" target="_blank">온라인서식 디자인적용(select)</a></li>
+		<li><a href="http://webdir.tistory.com/476" target="_blank">아이콘폰트</a></li>
+		<li><a href="http://fontawesome.io/cheatsheet/" target="_blank">폰트어썸 유니코드</a></li>
+		<li>Pure CSS Drawing
+			<ul>
+				<li><a href="http://pattle.github.io/simpsons-in-css/" target="_blank">The Simpsons in CSS</a></li>
+			</ul>
+		</li>
+	</ul>
+	<h3>CSS Preprocessor : LESS, SASS, Stylus</h3>
+	<ul>
+		<li><a href="https://opentutorials.org/course/277/1748" target="_blank">LESS 스터디</a></li>
+		<li><a href="http://lesscss.org/" target="_blank">LESS다운로드</a></li>
+		<li><a href="http://wearekiss.com/simpless" target="_blank">simpleless : less를 css로 전환해주는 도구</a></li>
+		<li><a href="http://csspre.com/convert/" target="_blank">css 전처리 변환사이트</a></li>
+		<li><a href="http://sass-lang.com/guide" target="_blank">SASS(Syntactically Awesome Style Sheets)</a></li>
+		<li><a href="sass.html" target="_blank">SASS more</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>Validation</h2>
+	<ul>
+		<li><a href="http://validator.kldp.org/" target="_blank">Markup검증서비스</a></li>
+		<li><a href="http://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation Service</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>polyfill</h2>
+	<p>폴리필(polyfill)은 개발자가 특정 기능이 지원되지 않는 브라우저를 위해 사용할 수 있는 코드 조각이나 플러그인을 말한다. 폴리필은 HTML5 및 CSS3와 오래된 브라우저 사이의 간격을 메꾸는 역할을 담당한다.</p>
+	<ul>
+		<li><a href="https://github.com/afarkas/html5shiv" target="_blank">html5shiv</a>: HTML5의 섹셔닝 요소(예: &lt;header&gt;, &lt;nav&gt;)를 지원하지 않는 브라우저를 위한 라이브러리</li>
+		<li><a href="http://www.mediaelementjs.com/" target="_blank">mediaelement.js</a>: HTML5의 &lt;video&gt;와 &lt;audio&gt; 요소들을 모든 브라우저에서 하나의 파일로 같은 UI를 제공하기 위한 라이브러리</li>
+		<li><a href="https://github.com/UmbraEngineering/Placeholder" target="_blank">Placeholder</a>: HTML5의 플레이스홀더(placeholder)의 지원을 통일하기 위해서 제공하는 라이브러리<p><a href="http://jamesallardice.github.io/Placeholders.js/" target="_blank">IE9이하 Placeholders.js</a></p></li>
+		<li><a href="http://ericleads.com/h5validate/" target="_blank">h5Validate</a> : HTML5의 폼검증 기능을 구현하기 위해 제공하는 라이브러리</li>
+		<li><a href="http://selectivizr.com/" target="_blank">selectivizr</a> : CSS3의 의사 클래스(pseudo-class)와 속성 선택자들을 IE6~8에서 지원하기 위한 라이브러리</li>
+		<li><a href="http://css3pie.com/" target="_blank">css3pie</a> : CSS3의 border-radius와 box-shadow, liner-gradient를 IE6~9 브라우저에서 지원하기 위한 라이브러리</li>
+		<li><a href="https://github.com/scottjehl/Respond" target="_blank">Respond</a> : 반응형 웹의 필수 속성중에 하나인 미디어쿼리를 IE6~8에서 지원하기 위한 라이브러리</li>
+		<li><a href="http://hacks.mozilla.or.kr/2014/12/an-easier-way-of-using-polyfills/" target="_blank">Polyfill을 사용하는 보다 쉬운 방법</a></li>
+		<li><a href="https://modernizr.com/">Modernizr</a><p><a href="http://webdir.tistory.com/82" target="_blank">Modernizer 설명한 블로그</a></p></li>
+		<li><a href="http://html5please.com/" target="_blank">HTML5Please</a></li>
+		<li><a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" target="_blank">HTML5 CrossBrowser Polyfills</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>웹표준,접근성</h2>
+	<ul>
+		<li><a href="http://nuli.navercorp.com/sharing/a11y/checklist" target="_blank">PC/모바일 웹 접근성 체크리스트</a> <a href="http://nuli.navercorp.com/">네이버 널리</a></li>
+		<li>WAI-ARIA
+			<ul>
+				<li>HTML5에서 도입한 role 속성을 통해 페이지의 모든 요소에 역할을 줄 수 있다. 이렇게 하면 스크린리더는 아주 쉽게 페이지를 분석하고, 모든 역할을 분류해서 페이지의 색인을 만들 수 있다.</li>
+				<li><a href="https://www.w3.org/WAI/intro/aria.php" target="_blank">WAI-ARIA 명세</a></li>
+				<li>
+					<span>표지판(landmark) 역할 ex) &lt;header id="page-header" role="banner"&gt;</span>
+					<table style="margin-bottom:10px">
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>역할</th>
+								<th>용도</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th>banner</th>
+								<td>페이지의 배너 영역을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>search</th>
+								<td>페이지의 검색 영역을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>navigation</th>
+								<td>페이지의 내비게이션 요소를 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>main</th>
+								<td>페이지의 주된 내용이 시작함을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>contentinfo</th>
+								<td>저작권 정보, 발행일 등 내용에 대한 정보가 있는 곳을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>complementary</th>
+								<td>페이지의 주된 내용을 보충하지만, 자체로도 의미 있는 내용을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>application</th>
+								<td>웹 문서가 아니라 웹 애플리케이션을 담고 있는 영역을 나타낸다.</td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+				<li>
+					<span>문서 구조 역할 &lt;body role="document"&gt;</span>
+					<table>
+						<colgroup>
+							<col style="width:20%">
+							<col style="width:80%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>역할</th>
+								<th>용도</th>
+							</tr>
+					  </thead>
+						<tbody>
+							<tr>
+								<th>documnet</th>
+								<td>문서 내용을 담고 있는 영역을 나타내며, 애플리케이션 내용과는 구별된다.</td>
+							</tr>
+							<tr>
+								<th>article</th>
+								<td>독립적인 부분을 형성함을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>definition</th>
+								<td>어떤 개념이나 주제를 정의함을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>directory</th>
+								<td>차례 같은 그룹을 참조하는 목록을 나타내며, 정적인 내용에 쓰인다.</td>
+							</tr>
+							<tr>
+								<th>heading</th>
+								<td>절의 제목을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>img</th>
+								<td>이미지 요소를 포함한 부분을 나타내며, 이미지를 나타내는 요소일 수도 있고, 설명하는 텍스트거나 캡션일 수도 있다.</td>
+							</tr>
+							<tr>
+								<th>list</th>
+								<td>상호 작용성이 없는 리스트 아이템의 그룹을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>listitem</th>
+								<td>상호 작용성이 없는 리스트 아이템 하나를 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>math</th>
+								<td>수학 표현을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>note</th>
+								<td>주된 내용에 대한 삽입구 또는 그를 보충하는 내용을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>presentation</th>
+								<td>보조 기술에서 무시해도 괜찮은 표현적 요소를 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>row</th>
+								<td>표 형태의 데이터(그리드)에서 한 행을 나타낸다.</td>
+							</tr>
+							<tr>
+								<th>rowheader</th>
+								<td>행의 헤더 정보를 담고 있는 셀을 나타낸다.</td>
+							</tr>
+						</tbody>
+					</table>
+				</li>
+				<li><a href="http://daumui.tistory.com/39" target="_blank">HTML5 요소 의미와 WAI-ARIA(Landmark Role) 의미 겹침</a></li>
+			</ul>
+
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h2>동작</h2>
+	<ul>
+		<li><h3>자바스크립트 API 문서</h3>
+			<ul>
+				<li><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">ECMAScript (표준문서)</a></li>
+				<li><a href="https://opentutorials.org/course/50" target="_blank">자바스크립트사전</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank">자바스크립트 레퍼런스 (MDN)</a></li>
+				<li><a href="https://msdn.microsoft.com/ko-kr/library/z688wt03(v=vs.100).aspx" target="_blank">jscript 레퍼런스 (MSDN)</a></li>
+			</ul>
+		</li>
+		<li><h3>호스트 환경의 API 문서</h3>
+			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">웹브라우저 API</a></li>
+				<li><a href="https://nodejs.org/api/" target="_blank">Node.js API</a></li>
+				<li><a href="https://developers.google.com/apps-script/" target="_blank">Google Apps Script API</a></li>
+			</ul>
+		</li>
+		<li><h3>JQuery</h3>
+			<ul>
+				<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+				<li><a href="http://sizzlejs.com/" target="_blank">Sizzle</a> jQuery selector</li>
+			</ul>
+		</li>
+		<li><h3>라이브러리</h3>
+			<ul>
+				<li><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery Easing Plugin</a></li>
+				<li><a href="https://github.com/dohoons/jquery.touchSlider" target="_blank">jquery.touchSlider</a></li>
+				<li><a href="http://idangero.us/swiper/#.WMjaf1XyhhE" target="_blank">Swiper Most Modern Mobile Touch Slider</a></li>
+				<li><a href="http://fancybox.net/" target="_blank">fancybox</a>이미지표현</li>
+				<li><a href="http://bxslider.com/" target="_blank">bxslider</a> The Responsive jQuery Content Slider</li>
+				<li><a href="http://alvarotrigo.com/fullPage/" target="_blank">fullPage</a> Fullscreen Scrolling Websites</li>
+				<li><a href="http://slidesjs.com/" target="_blank">SlidesJS</a></li>
+				<li><a href="https://owlcarousel2.github.io/OwlCarousel2/" target="_blank">Owl Carousel 2</a></li>
+				<li><a href="http://ryrych.pl/rcarousel/" target="_blank">jQuery UI carousel</a></li>
+				<li><a href="http://kenwheeler.github.io/slick/" target="_blank">slick-slider</a></li>
+				<li><a href="https://github.com/lukehaas/Scrollify" target="_blank">jQuery Scrollify</a> </li>
+				<li><a href="https://greensock.com/" target="_blank">GreenSock</a> HTML5 animation </li>
+				<li><a href="http://js-grid.com/" target="_blank">jsGrid</a> 제이쿼리로 데이터 그리드를 그리는 플러그인</li>
+				<li><a href="http://craftpip.github.io/jquery-confirm" target="_blank">jquery-confirm</a> 모달창</li>
+				<li><a href="https://jqueryvalidation.org/" target="_blank">입력값검증 플러그인</a></li>
+			</ul>
+		</li>
+		<li><h3>프레임워크 : Angular, React, Ember, Backbone</h3>
+			<ul>
+				<li><a href="" target="_blank">Angular</a>자바스크립트 프레임워크로 원페이지 어플리케이션에서 뛰어나면서 전통적인 웹 어플리케이션에 약간의 "마법"을 부린 것처럼 동작하는 것도 가능하다.</li>
+			</ul>
+		</li>
+		<li><h3>액션적용</h3>
+			<ul>
+				<li><a href="http://uidevelop.tistory.com/15" target="_blank">테이블 tr 토글 제이쿼리</a></li>
+				<li><a href="http://webdir.tistory.com/481" target="_blank">스크롤을 감지하여 사이트의 헤더를 보이거나 숨기기</a></li>
+				<li><a href="http://webdir.tistory.com/429" target="_blank">포커스시 .label 숨기기</a></li>
+				<li><a href="http://webclub.tistory.com/366" target="_blank">접근성 레이어 팝업 코드</a></li>
+			</ul>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h2>서버</h2>
+	<ul>
+		<li><a href="https://opentutorials.org/course/2136/11850" target="_blank">Nodejs</a> 서버 측에서 동작하는 자바스크립트</li>
+		<li><a href="http://gruntjs.com/" target="_blank">Grunt</a> and <a href="https://nodejs.org/en/" target="_blank">Node</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>교육</h2>
+	<ul>
+		<li><a href="http://poiemaweb.com/" target="_blank">웹프로그래밍 입문자 교육 사이트</a></li>
+		<li><a href="https://opentutorials.org/course/743" target="_blank">생활코딩 JavaScript</a></li>
+		<li><a href="https://opentutorials.org/course/1375" target="_blank">생활코딩 웹브라우저 자바스크립트</a></li>
+		<li><a href="https://opentutorials.org/course/53" target="_blank">생활코딩 jQuery</a></li>
+		<li><a href="http://jstherightway.org/ko-kr/" target="_blank">자바스크립트 모범사례, 코딩표준 등을 정리 jstherightway</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">자바스크립트에 대한 정보, 참고자료, 뉴스</a></li>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">문서 객체 모델(DOM)은 HTML과 XML 문서의 API</a></li>
+		<li><a href="https://google.github.io/styleguide/javascriptguide.xml" target="_blank">Google JavaScript Style Guide</a></li>
+		<li><a href="https://github.com/rwaldron/idiomatic.js" target="_blank"> JavaScript에도 다양한 코딩 스타일 규칙</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>브랜치(Branch), 버전관리, 형상관리, 이슈관리, 코드리뷰, </h2>
+	<ul>
+		<li>CVS,SVN,Git</li>
+		<li><a href="https://backlogtool.com/git-guide/kr/intro/intro1_1.html" target="_blank">누구나 쉽게 이해할 수 있는 Git 입문</a></li>
+		<li><a href="https://git-scm.com/" target="_blank">https://git-scm.com</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>개발도구</h2>
+	<ul>
+		<li><a href="https://filezilla-project.org/" target="_blank">FileZilla(FTP)</a></li>
+		<li><a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a>
+			<ul>
+				<li><a href="SublimeText.html" target="_blank">서브라임텍스트 설치</a></li>
+			</ul>
+		</li>
+		<li><a href="https://atom.io/" target="_blank">Atom 에디터</a>
+			<ul>
+				<li><a href="http://naradesign.net/wp/2016/10/12/2212/" target="_blank">Atom 편집기 설정</a></li>
+				<li><a href="https://atom.io/packages/sync-settings" target="_blank">Sync Settings for Atom</a></li>
+				<li><a href="http://sanghaklee.tistory.com/42" target="_blank">Atom 아톰 동기화 설정 파일 백업 atom packages sync backup</a></li>
+				<li><a href="https://joshuajangblog.wordpress.com/2016/09/01/atom-plugins-cant-live-without-it/" target="_blank">Atom 의 유용한 플러그인 리스트</a></li>
+				<li><a href="https://atom.io/packages/emmet" target="_blank">Emmet plugin Atom editor</a></li>
+				<li><a href="http://emmet.io/" target="_blank">Emmet 홈페이지</a></li>
+				<li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet cheat-sheet</a></li>
+				<li><a href="https://atom.io/packages/gpp-compiler" target="_blank">gpp-compiler C언어 컴파일러</a></li>
+			</ul>
+		</li>
+
+	</ul>
+</section>
+
+<section>
+	<h2>웹폰트 사용</h2>
+	<ul>
+		<li><a href="https://fonts.google.com/earlyaccess" target="_blank">Google Fonts</a>
+			<ul>
+				<li>나눔고딕 Nanum Gothic : @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);<br> font-family: 'Nanum Gothic', serif;</li>
+				<li>나눔명조 Nanum Myeongjo : @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);<br> font-family: 'Nanum Myeongjo', serif;</li>
+				<li>나눔고딕 코딩 Nanum Gothic Coding : @import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);<br> font-family: 'Nanum Gothic Coding', serif;</li>
+				<li>나눔손글씨 붓  Nanum Brush Script : @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);<br> font-family: 'Nanum Brush Script', serif;</li>
+				<li>나눔손글씨 펜 Nanum Pen Script : @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);<br>font-family: 'Nanum Pen Script', serif;</li>
+				<li>제주고딕 Jeju Gothic : @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);<br>font-family: 'Jeju Gothic', serif;</li>
+				<li>제주한라산 Jeju Hallasan : @import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);<br>font-family: 'Jeju Hallasan', serif;</li>
+				<li>제주명조 Jeju Myeongjo : @import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);<br>font-family: 'Jeju Myeongjo', serif;</li>
+				<li>한나체 Hanna : @import url(http://fonts.googleapis.com/earlyaccess/hanna.css);<br>font-family: 'Hanna', serif;</li>
+				<li>KoPub 바탕 KoPub Batang : @import url(http://fonts.googleapis.com/earlyaccess/kopubbatang.css);<br>font-family: 'KoPub Batang', serif;</li>
+				<li>Noto Sans KR : @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);<br>font-family: 'Noto Sans KR', sans-serif;</li>
+			</ul>
+		</li>
+		<li><a href="http://hangeul.naver.com/2016/nanum" target="_blank">나눔고딕</a></li>
+		<li><a href="https://hiun.org/NanumBarunGothic/" target="_blank">나눔바른고딕</a></li>
+		<li><a href="http://font.iropke.com/batang/#info" target="_blank">이롭게 바탕체</a></li>
+		<li><a href="https://www.google.co.kr/get/noto/#sans-kore" target="_blank">본고딕( Noto Sans CJK )</a></li>
+		<li>나눔바른 고딕 : <a href="https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css">CDN <br>font-family: 'Nanum Barun Gothic', sans-serif;</a></li>
+		<li>폰트변환
+			<ul>
+				<li><a href="http://www.eotfast.com/" target="_blank">Convert TTF to EOT</a></li>
+				<li><a href="http://wit.nts-corp.com/2017/02/13/4258" target="_blank">웹폰트 적용에 대한 설명</a></li>
+			</ul>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h2>퍼블리셔 업무 프로세스</h2>
+	<table class="publish-process">
+		<caption>퍼블리셔 업무 프로세스</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col style="width:40%">
+			<col style="width:50%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">작업 단계</th>
+				<th scope="col">기술 구현 항목</th>
+				<th scope="col">구현 항목별 코멘트</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="rowgroup" rowspan="2">스토리보드 검토</th>
+				<td>UI/UX 기술 구현 가능 여부 확인</td>
+				<td>구현 어려울 시 대체 기술 기획자 협의</td>
+			</tr>
+			<tr>
+				<td>UI/UX 접근성 제고 여부 검토</td>
+				<td>웹 컨텐츠 접근성 지침 2.0 을 기준으로 함<br>
+					접근성 미제고시 UI/UX 접근성 제고 요청</td>
+			</tr>
+			<tr>
+				<th scope="rowgroup" rowspan="2">웹 리소스 구조화</th>
+				<td>리소스 폴더 구조 설계 및 생성</td>
+				<td>개발자 협의</td>
+			</tr>
+			<tr>
+				<td>파일 네이밍 가이드 수립</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="rowgroup" rowspan="5">시안 검토</th>
+				<td>컨텐츠 분석 및 정보의 논리적 선형화</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>디자인에 따라 구역 분할</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>논리구조에 따른 HTML 문서 구조화</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>공통 CSS, JS 가이드 작성</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>디자인적 접근성 제고 여부 검토</td>
+				<td>웹 컨텐츠 접근성 지침 2.0 을 기준으로 함<br>
+					접근성 미제고시 시안 수정 요청</td>
+			</tr>
+			<tr>
+				<th scope="rowgroup" rowspan="10">퍼블리싱</th>
+				<td>CSS 가이드 수립, <br>
+					문서내 ID / Class 구조화 및 정리</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>문서 구조에    따라<br>
+					시안 PSD 슬라이싱 및 이미지 분할 저장</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>웹 표준,    웹접근성 지침을 기준으로<br>
+					JavaScript 사용불가 환경 마크업 진행</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>마크업 유효성 검사</td>
+				<td>W3C Markup Validator 이용</td>
+			</tr>
+			<tr>
+				<td>CSS 작성</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>브라우저 렌더링 화면과 시안 비교</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>JavaScript 사용가능 환경 마크업 / CSS    추가 작성</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>JavaScript 개발</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>JavaScript 오류 테스트</td>
+				<td>IE 7 ~ 10, Google Chrome,    FireFox, Safari 등 Major 웹 브라우저 동작 테스트</td>
+			</tr>
+			<tr>
+				<td>접근성 제고 검토</td>
+				<td>웹 컨텐츠 접근성 지침 2.0 기준</td>
+			</tr>
+			<tr>
+				<th scope="rowgroup" rowspan="2">개발 페이지 보수</th>
+				<td>웹표준 검사</td>
+				<td rowspan="2">일부 개발 코드 수정 요청</td>
+			</tr>
+			<tr>
+				<td>접근성 제고 검사</td>
+			</tr>
+			<tr>
+				<th scope="rowgroup" rowspan="4">산출물 최종 확인</th>
+				<td>브라우저 테스트</td>
+				<td>Major 웹 브라우저 렌더링 및 동작 테스트</td>
+			</tr>
+			<tr>
+				<td>웹 표준 검사</td>
+				<td>W3C Markup Validator 이용</td>
+			</tr>
+			<tr>
+				<td>문서의 논리적/의미론적 구조 수동 검사</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>웹 접근성 최종 검토</td>
+				<td>정량 / 정성 평가 진행</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<section>
+	<h2>가이드</h2>
+	<ul>
+		<li><a href="http://darum.daum.net/convention/name" target="_blank">다음 파일네이밍가이드</a></li>
+		<li><a href="http://opencode.co.kr/bbs/board.php?bo_table=css&wr_id=7" target="_blank">네이버 파일네이밍가이드</a></li>
+		<li><a href="http://pubguide.geistkorea.co.kr/markup/naming/index.html" target="_blank">가이스트코리아 마크업 가이드라인 1.0</a></li>
+		<li><a href="http://m.egovframe.go.kr/mguide/guide/template/namingRule.do" target="_blank">정부프레임</a></li>
+		<li><a href="http://nuli.nhncorp.com/data/convention/NHN_Coding_Conventions_for_Markup_Languages-v2.75_open.pdf" target="_blank">nhn 코딩컨벤션</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>버전관리시스템</h2>
+	<ul>
+		<li><a href="https://tortoisesvn.net/downloads.html" target="_blank">TortoiseSVN 다운로드</a> <a href="https://opentutorials.org/course/305/1962" target="_blank">생활코딩 Subversion</a></li>
+		<li><a href="" target="_blank">Git</a> <a href="https://opentutorials.org/course/2708" target="_blank">생활토딩 지옥에서 온 Git</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>웹접근성 보장방법</h2>
+	<h3>W3C 표준에 근거한 의미에 맞는 HTML 엘리먼트를 사용하여 문서 구조 마크업</h3>
+	<ul>
+		<li>적절한한 헤딩 엘리먼트 사용 - &lt;1&gt; ~ &lt;6&gt;</li>
+		<li>적절한 목록 엘리먼트 사용 - 비순차적목록 &lt;ul&gt; , 순차적목록 &lt;ol&gt;</li>
+		<li>논리적인 순서 보장 - 문서의 흐름과 동일하게 마크업 순서를 결정하는 것이다</li>
+		<li>대체 텍스트 제공
+			<ul>
+				<li>이미지 대체 텍스트 제공</li>
+				<li>원문 그대로의 대체 텍스트 제공</li>
+				<li>텍스트가 없는 정보성 이미지의 대체 텍스트 제공</li>
+				<li>텍스트가 많은 이미지의 대체 텍스트 제공 - 이미지를 배경으로 처리하고 텍스트는 배경으로 처리된 이미지 뒤에 숨긴다.</li>
+				<li>추가 정보 필요 시 title 애트리뷰트 사용 - 폼 엘리먼트 : input( text,radio,checkbox,file,password), select, textarea  lable과 title 중 택일, iframe</li>
+			</ul>
+		</li>
+		<li>표의 구성
+			<ul>
+				<li>caption, summary</li>
+				<li>&lt;thead&gt; &lt;tfoot&gt; &lt;tbody&gt; 엘리먼트 사용</li>
+				<li>&lt;th&gt; 엘리먼트 사용</li>
+				<li>scope 애트리뷰트 사용</li>
+				<li>id, headers 애트리뷰트 사용</li>
+			</ul>
+		</li>
+		<li>온라인 서식 구성
+			<ul>
+				<li>&lt;fieldset&gt;을 이용한 그루핑, 제목 역활을 하는 &lt;legend&gt; 명신</li>
+			</ul>
+		</li>
+		<li>키보드 접근성 보장 - 키보드 접근성을 보장한다는 것은 마우스를 사용할 수 없는 환경(장치 없음, 시각 장애, 지체 장애, 일부모바일)에서 웹을 이용할 수 있는 가장 기본적인 방법이다.모든 콘텐츠는 키보드로 접근이 가능해야 하며 마우스 의존적인 이벤트 핸들러는 사용하지 않는다.
+			<ul>
+				<li>장치 독립적읶 이벤트 사용 - onClick, onFocus, onBlur, onSelect</li>
+				<li>키보드 단축키 제공 - accesskey 애트리뷰트를 이용한 단축키 제공</li>
+				<li>웹 브라우징 도구와의 충돌 확인 - 단축키 사용이 가능한 권장 접근키 - 숫자키,</li>
+			</ul>
+		</li>
+		<li>스킵 내비게이션 제공</li>
+		<li>생략된 제목 표시 - 문서를 올바르게 이해할 수 있도록 생략된 제목을 표시한다</li>
+		<li>배경 색상 제공(모바일) - 이미지를 불러오지 못하거나 느린 네트웍 속도로 인해 이미지를 빠르게 가져오지 못하는 경우에도 콘텐츠를 이용할 수 있도록 배경 색상을 제공한다. 배경 색상은 디자인 된 색상 중 가장 넓은 면적을 차지하는 색상에서 추출하여 지정하며, 동일한 색상이지만 콘텎츠 구분이 필요한 경우 채도나 명도를 조절하여 사용한다.</li>
+		<li>정보성 이미지를 배경 이미지로 표현하는 경우(모바일)</li>
+		<li>색상만으로 정보를 제공하는 디자인의 경우 &lt;img&gt; 뿐 아니라, 배경(background)으로도 정보를 제공할 수 있다. 이 때 CSS에 6.10 배경 색상 제공(모바일)과 같은 방법으로 배경 색상을 지정해야 하며, HTML에는 이에 대한 대체 콘텐츠를 반드시 선언한다. 단, 의미없는 이미지일 경우 생략 가능하다.</li>
+	</ul>
+
+	<h3>구조와 표현을 분리하여 마크업</h3>
+	<ul>
+		<li>html (구조)</li>
+		<li>CSS (표현)</li>
+	</ul>
+
+	<h3>크로스 브라우징 범위</h3>
+	<ul>
+		<li>윈도우 7
+			<ul>
+				<li>인터넷 익스플로러 8.x~</li>
+				<li>크롬</li>
+				<li>파이어폭스</li>
+				<li>사파리</li>
+			</ul>
+		</li>
+		<li>매킨토시
+			<ul>
+				<li>파이어폭스</li>
+				<li>사파리</li>
+			</ul>
+		</li>
+	</ul>
+</section>
+
+<section>
+	<h2>단위변환</h2>
+	<table class="unitTb">
+		<colgroup>
+			<col style="width:25%">
+			<col style="width:25%">
+			<col style="width:25%">
+			<col style="width:25%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>px</th>
+				<th>em</th>
+				<th>px</th>
+				<th>em</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1px</td>
+				<td>0.07em</td>
+				<td>11px</td>
+				<td>0.79em</td>
+			</tr>
+			<tr>
+				<td>2px</td>
+				<td>0.14em</td>
+				<td>12px</td>
+				<td>0.86em</td>
+			</tr>
+			<tr>
+				<td>3px</td>
+				<td>0.21em</td>
+				<td>13px</td>
+				<td>0.93em</td>
+			</tr>
+			<tr>
+				<td>4px</td>
+				<td>0.29em</td>
+				<td>14px</td>
+				<td>1em</td>
+			</tr>
+			<tr>
+				<td>5px</td>
+				<td>0.36em</td>
+				<td>15px</td>
+				<td>1.07em</td>
+			</tr>
+			<tr>
+				<td>6px</td>
+				<td>0.43em</td>
+				<td>16px</td>
+				<td>1.14em </td>
+			</tr>
+			<tr>
+				<td>7px</td>
+				<td>0.5em</td>
+				<td>17px</td>
+				<td>1.21em</td>
+			</tr>
+			<tr>
+				<td>8px</td>
+				<td>0.57em </td>
+				<td>18px</td>
+				<td>1.29em</td>
+			</tr>
+			<tr>
+				<td>9px</td>
+				<td>0.64em </td>
+				<td>19px</td>
+				<td>1.36em</td>
+			</tr>
+			<tr>
+				<td>10px</td>
+				<td>0.71em</td>
+				<td>20px</td>
+				<td>1.43em</td>
+			</tr>
+			<tr>
+				<td>21px</td>
+				<td>1.5em</td>
+				<td>31px</td>
+				<td>2.21em</td>
+			</tr>
+			<tr>
+				<td>22px</td>
+				<td>1.57em</td>
+				<td>32px</td>
+				<td>2.29em</td>
+			</tr>
+			<tr>
+				<td>23px</td>
+				<td>1.64em</td>
+				<td>33px</td>
+				<td>2.36em</td>
+			</tr>
+			<tr>
+				<td>24px</td>
+				<td>1.71em</td>
+				<td>34px</td>
+				<td>2.43em</td>
+			</tr>
+			<tr>
+				<td>25px</td>
+				<td>1.79em</td>
+				<td>35px</td>
+				<td>2.5em</td>
+			</tr>
+			<tr>
+				<td>26px</td>
+				<td>1.86em</td>
+				<td>36px</td>
+				<td>2.57em</td>
+			</tr>
+			<tr>
+				<td>27px</td>
+				<td>1.93em</td>
+				<td>37px</td>
+				<td>2.46em</td>
+			</tr>
+			<tr>
+				<td>28px</td>
+				<td>2em</td>
+				<td>38px</td>
+				<td>2.71em</td>
+			</tr>
+			<tr>
+				<td>29px</td>
+				<td>2.07em</td>
+				<td>39px</td>
+				<td>2.79em</td>
+			</tr>
+			<tr>
+				<td>30px</td>
+				<td>2.14em</td>
+				<td>40px</td>
+				<td>2.86em</td>
+			</tr>
+		</tbody>
+	</table>
+	<ul>
+		<li><a href="http://pxtoem.com/">http://pxtoem.com</a>단위변환참고</li>
+	</ul>
+</section>
+
+<section>
+	<h2>id/class 선택자 선언 규약</h2>
+</section>
+
+<section>
+	<h2>스타일선언 규칙</h2>
+
+	<h3>CSS 선언 방식</h3>
+	<ul>
+		<li>CSS style 내용을 CSS 파일로 따로 저장하여 페이지에 linking 시키는 External 방식을 사용한다.</li>
+		<li>여러 개의 파일을 link 시킬 수 있기 때문에 공통/자주 사용되는 부분을 따로 저장하여 사용하는게 용이하다.</li>
+		<li>CSS 파일 내에 인코딩 선언을 해주는 것이 좋다.- @charset "utf-8"</li>
+	</ul>
+
+	<h3>단위</h3>
+	<ul>
+		<li>px</li>
+		<li>em</li>
+		<li>%(percent)</li>
+		<li>rem</li>
+	</ul>
+
+	<h3>CSS 선택자 사용 방식</h3>
+	<ul>
+		<li>공통 클래스를 불러다 놓고 각 엘리먼트에 세부적인 클래스를 추가하는 방식- 성능을 개선시킬 수 있는 방식</li>
+		<li>공통 클래스를 따로 만들지 않고 각 엘리먼트의 여러 클래스를 콤마로 구분하여 공통 스타일을 정의 한 후, 아래에서 세부적인 스타일을 추가하는 방식</li>
+		<li><a href="http://screwlewse.com/" target="_blank">Screwlewse</a></li>
+	</ul>
+
+	<h3>CSS 속성 선언 순서</h3>
+	<table class="css-order">
+		<caption class="screen_hide">CSS 속성 선언 순서</caption>
+		<colgroup>
+			<col style="width:10%">
+			<col style="width:50%">
+			<col style="width:40%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>순서</th>
+				<th>속성</th>
+				<th>의미</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>1</th>
+				<td>display</td>
+				<td>표시</td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td>overflow</td>
+				<td>넘침</td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td>float</td>
+				<td>흐름</td>
+			</tr>
+			<tr>
+				<th>4</th>
+				<td>position</td>
+				<td>위치</td>
+			</tr>
+			<tr>
+				<th>5</th>
+				<td>z-index</td>
+				<td>정렬</td>
+			</tr>
+			<tr>
+				<th>6</th>
+				<td>width &amp; height</td>
+				<td>크기</td>
+			</tr>
+			<tr>
+				<th>7</th>
+				<td>margin &amp; padding</td>
+				<td>간격</td>
+			</tr>
+			<tr>
+				<th>8</th>
+				<td>border</td>
+				<td>보더</td>
+			</tr>
+			<tr>
+				<th>9</th>
+				<td>font</td>
+				<td>폰트</td>
+			</tr>
+			<tr>
+				<th>10</th>
+				<td>background</td>
+				<td>배경</td>
+			</tr>
+			<tr>
+				<th>11</th>
+				<td>etc(기타)</td>
+				<td>color,text-decoration,text-indent,clear...</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+	<h3>font 속성 순서</h3>
+	<p>축약형을 사용하지 않으며, 스타일 선언시 font-style > font-variant > font-weight > font-size > line-height > font-family 순서로 선언하길 권장한다.</p>
+
+	<h3>background-position 속성값</h3>
+	<ul>
+		<li>숫자로 선언한다.</li>
+		<li>.bg {background-position:100% 50%}</li>
+	</ul>
+
+</section>
+
+<section>
+	<h2>Image 네이밍 규약</h2>
+	<p>형태+의미+상태</p>
+	<table class="img-name">
+		<caption>Image 네이밍 규약</caption>
+		<colgroup>
+			<col style="width:65%">
+			<col style="width:35%">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>제목</th>
+				<td>h*_*</td>
+			</tr>
+			<tr>
+				<th>문장</th>
+				<td>p_*</td>
+			</tr>
+			<tr>
+				<th>글로벌 네비게이션</th>
+				<td>gnb_*</td>
+			</tr>
+			<tr>
+				<th>로컬 네비게이션</th>
+				<td>nb_*</td>
+			</tr>
+			<tr>
+				<th>사이드 네비게이션</th>
+				<td>snb_*</td>
+			</tr>
+			<tr>
+				<th>탭</th>
+				<td>tab_*</td>
+			</tr>
+			<tr>
+				<th>버튼</th>
+				<td>btn_*</td>
+			</tr>
+			<tr>
+				<th>박스</th>
+				<td>bx_*</td>
+			</tr>
+			<tr>
+				<th>블릿</th>
+				<td>bu_*</td>
+			</tr>
+			<tr>
+				<th>아이콘</th>
+				<td>ico_*</td>
+			</tr>
+			<tr>
+				<th>선 </th>
+				<td>line_*</td>
+			</tr>
+			<tr>
+				<th>배경</th>
+				<td>bg_*</td>
+			</tr>
+			<tr>
+				<th>광고</th>
+				<td>ad_*</td>
+			</tr>
+			<tr>
+				<th>임시</th>
+				<td>@*</td>
+			</tr>
+			<tr>
+				<th>상태변화 비활성</th>
+				<td>*_off</td>
+			</tr>
+			<tr>
+				<th>상태변화 오버, 포커스</th>
+				<td>*_over</td>
+			</tr>
+			<tr>
+				<th>상태변화 활성</th>
+				<td>*_on</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+</article>
+</body>
+</html>
