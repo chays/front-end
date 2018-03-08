@@ -1,0 +1,27 @@
+@import "reset.css";
+#accessibility{position:relative}
+#accessibility a{display:block;height:1px;width:1px;margin-bottom:-1px;overflow:hidden;text-align:center;color:#000;white-space:nowrap}
+#accessibility a:focus,
+#accessibility a:active{position:absolute;height:auto;width:100%;padding:5px;margin-bottom:10px;width:100%;background:#fff;z-index:9999}
+
+.skip, hr, legend{position:absolute;left:-9999px;overflow:hidden;width:1px;height:1px;padding:0;margin-top:-1px;font-size:0;line-height:0}
+caption{overflow:hidden;width:1px;height:1px;height:0;padding:0;margin-top:-1px;font-size:0;line-height:0;text-indent:-99999px}
+
+.blind{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}
+
+/*한줄 말줄임*/
+.reduce_line{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal}
+
+/*멀티 말줄임*/
+.reduce_multi,
+.reduce_multi > *{position: relative; overflow: hidden; display: block; word-break: break-all; }
+.reduce_multi:after{content: '...'; position: absolute; right: 0; bottom:0; width: 15px; z-index: 1;}
+.reduce_multi >*:after{content: ''; position: absolute; right: 0; bottom: 0; width: 15px; height: 10px; background-color: #fff; z-index: 9;}
+
+/*멀티 말줄임 필수값(변경가능)*/
+.reduce_multi,
+.reduce_multi > *{width: 140px; padding-right: 15px;}
+.reduce_multi{max-height: 37px;}
+.reduce_multi > *{min-height: 37px; line-height: 1.2em;}
+
+/*font*/
