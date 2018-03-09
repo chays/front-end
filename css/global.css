@@ -24,6 +24,13 @@ caption{overflow:hidden;width:1px;height:1px;height:0;padding:0;margin-top:-1px;
 .reduce_multi{max-height: 37px;}
 .reduce_multi > *{min-height: 37px; line-height: 1.2em;}
 
-/*font*/
+html{overflow-y:scroll}
 
-/*layout*/
+header{}
+footer{}
+nav{}
+section{}
+article{}
+aside{}
+hgroup{}
+figure{}/*그린, 비디오와 같은 포함된 컨텎츠의 Caption 을 표시할때 사용한다*/

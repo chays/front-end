@@ -5,8 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>test</title>
+  <script src="js/jquery.min.js"></script>
+  <style>
+  *{margin:0;padding:0}
+  ul,li{list-style:none}
+
+.g-tabs{position:absolute;left:320px;top:20px;overflow:hidden;border:1px solid lime}
+.g-tabs > a {float:left;cursor:pointer}
+.g-tabs > a {margin-right:20px}
+
+.g-tabs ul {float:left}
+.g-tabs li{float:left;height:80px;padding:0 13px 0 12px;-background:#ccc}
+.g-tabs ul li.hidden {position:absolute;left:-10000px;top:0}
+.g-tabs ul li.first {padding-left:0}
+.g-tabs ul li:last-child{padding-right:0}
+.g-tabs a{font-family:'sssB';font-size:28px;color:#999;line-height:1.2;padding:17px 20px 15px;-background:#e0e0e0;display:block;box-sizing:border-box}
+.g-tabs li.on a{color:#333}
+.g-tabs a{transition:color 0.35s cubic-bezier(0.215, 0.610, 0.355, 1.000);-webkit-transition:color 0.35s cubic-bezier(0.215, 0.610, 0.355, 1.000);-moz-transition:color 0.35s cubic-bezier(0.215, 0.610, 0.355, 1.000);-o-transition:color 0.35s cubic-bezier(0.215, 0.610, 0.355, 1.000)}
+.g-tab-bar{position:absolute;left:0;bottom:0;width:176px;height:6px;background:#25b4e1}
+
+
+
+  </style>
+
+  <script>
+    $(function(){
+
+       var $gTabs=$('.g-tabs');
+       var $gTabs_a=$gTabs.find('>ul>li>a');
+
+       $gTabs_a.on('mouseenter',function(){
+         var indx=$(this).parent().index();
+         var pos=$(this).parent().position();
+         var wiz=$(this).parent().outerWidth();
+         $('.g-tab-bar').show();
+         $('.g-tab-bar').animate({left:pos.left,width:wiz},200);
+         $gTabs_a.parent().removeClass('on');
+         $(this).parent().addClass('on');
+       });
+
+       $gTabs.on('mouseleave',function(){
+          $gTabs_a.parent().removeClass('on');
+          $('.g-tab-bar').hide();
+       });
+
+    });
+  </script>
 </head>
 <body>
-  test1
+
+  <div class="g-tabs">
+			<ul>
+				<li data-index="0" class="on"><a href="#g-products" data-omni=":menu_products" data-index="0" tabindex="2">Products</a></li>
+				<li data-index="1" class=""><a href="#g-howtos" title="Go to Galaxy How-Tos" data-omni=":menu_how-tos" data-index="1" tabindex="15">How-Tos</a></li>
+				<li data-index="2" class=""><a href="#g-gallery" title="Go to Galaxy Gallery" data-omni=":menu_gallery" data-index="2" tabindex="20">Gallery</a></li>
+				<li data-index="3" class=""><a href="#g-event" title="Go to Galaxy Events" data-omni=":menu_events" data-index="3" tabindex="26">Events</a></li>
+				<li data-index="4" class=""><a href="#g-apps" title="Go to Galaxy Apps" data-omni=":menu_apps" data-index="4" tabindex="31">Apps</a></li>
+      </ul>
+      <div class="g-tab-bar"></div>
+		</div>
 </body>
 </html>
